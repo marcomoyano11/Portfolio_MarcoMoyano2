@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Hafa - Portafolio</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link href="css/estilos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="">
+</head>
+
+<body class="clase-proyecto">
+
+    <nav class="flex nav poppins-medium">       
+        <a href="index.html"><p class="navdiv zoom2">Home.</p></a>
+        <a href="index.html#portfolio"><p class="navdiv zoom2">Portfolio</p></a>
+        <a href="/contacto.html"><p class="navdiv zoom2">contacto</p></a>
+    </nav>
+    
+    <div class="container_hafacafe">
+
+        <div class="port_text2">
+            <p class="poppins-bold title2">Cafe Hafa</p>
+            <p class="poppins-light title4">Lettering 3D</p>
+            <p class="poppins-light text_hafacafe">
+                En este proyecto me inspiré en el café Hafa, un café emblemático de la ciudad de Tánger, para crear un lettering que posteriormente modelé y animé en Blender 3D. La forma de las letras está inspirada en la caligrafía cúfica cuadrada. 
+            </p>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <video src="recursos/imagenes/cafe_hafa/propuesta2.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="swiper-slide">
+                    <video src="recursos/imagenes/cafe_hafa/PropuestaFinal_Lettering_MarcoMoyano.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="swiper-slide">
+                    <img src="recursos/imagenes/cafe_hafa/hafarender5.png" alt="Café Hafa - Render 5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="recursos/imagenes/cafe_hafa/hafarender6.png" alt="Café Hafa - Render 6">
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+            
+    </div> <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,           
+        spaceBetween: 30,     
+        effect: "fade",       
+        
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+       
+      });
+    </script>
+
+    <footer class="poppins-extralight">
+        <p>Created by <span class="poppins-medium white"> Marco Moyano. </span></p>
+    </footer>
+
+</body>
+</html>

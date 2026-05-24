@@ -1,0 +1,26 @@
+[
+  {
+    "clase": "portfolio-card",
+    "enlace": "portfolio_pan.html",
+    "imagen": "recursos/imagenes/pan_protectora/mockup_poster_corrección.jpg",
+    "alt": "mockup carteles pan"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "Portfolio_Cata_la_lata.html",
+    "imagen": "recursos/imagenes/cata_la_lata/atún3.jpg",
+    "alt": "mockup packaging"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "portfolio_familias_tipo.html",
+    "imagen": "recursos/imagenes/tipo_musica/3_3.jpg",
+    "alt": "fancine tipo"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "portfolio_cafe_hafa.html",
+    "imagen": "recursos/imagenes/cafe_hafa/hafarender5.png",
+    "alt": "render 3d"
+  }
+]
