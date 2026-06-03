@@ -286,7 +286,6 @@ footer p {
 }
 
 .portfoliotitulo {
-  color: rgb(23, 104, 170);
   font-size: 40px;
   padding-top: 14px;
   padding-right: 100px;
@@ -295,6 +294,7 @@ footer p {
   text-align: left;
   scroll-margin-top: 60px;
   margin-bottom: 10px;
+  color: rgb(23, 104, 170);
 }
 
 .portfolio-card {
@@ -616,7 +616,7 @@ body:not(.clase-proyecto):-webkit-scrollbar {
   /* Index en móvil */
   .container3 {
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     width: 100%;
@@ -634,7 +634,7 @@ body:not(.clase-proyecto):-webkit-scrollbar {
     grid-area: text;
     padding-top: 20px;
     margin-right: 30px;
-    margin-left: 30px;
+    margin-left: 0px;
     font-size: 24px;
     word-break: keep-all;
   }
@@ -647,7 +647,7 @@ body:not(.clase-proyecto):-webkit-scrollbar {
   }
   .container4 {
     background-color: #ffffff;
-    margin: 40px 20px 0 20px;
+    margin: 20px 20px 0 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     width: auto;
@@ -661,6 +661,7 @@ body:not(.clase-proyecto):-webkit-scrollbar {
     margin-top: 20px;
     text-align: left;
     scroll-margin-top: 40px;
+    color: rgb(23, 104, 170);
   }
   .portfoliofloor {
     height: 8px;
