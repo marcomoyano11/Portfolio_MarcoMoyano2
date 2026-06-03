@@ -286,7 +286,8 @@ footer p {
 }
 
 .portfoliotitulo {
-  font-size: 30px;
+  color: rgb(23, 104, 170);
+  font-size: 40px;
   padding-top: 14px;
   padding-right: 100px;
   padding-left: 20px;
