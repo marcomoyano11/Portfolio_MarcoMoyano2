@@ -27,14 +27,14 @@
   {
     "clase": "portfolio-card",
     "enlace": "portfolio_bandcamp.html",
-    "imagen": "recursos/imagenes/bandcamp/Free Single Banner Mockup.png",
+    "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
     "alt": "render 3d"
   },
 
   {
     "clase": "portfolio-card",
     "enlace": "portfolio_pussiere_etoile.html",
-    "imagen": "recursos/imagenes/pussiere_etoile/WhatsApp Image 2026-09-09 at 13.25.10.jpeg",
+    "imagen": "recursos/imagenes/pussiere_etoile/panfleto_1.jpeg",
     "alt": "pussiere etoile"
   }
 
