@@ -185,7 +185,7 @@ template {
 
 nav {
   padding: 11px 0px 19px 0px;
-  height: 5vb;
+  height: 3vb;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -198,8 +198,8 @@ nav {
 }
 
 .navdiv {
-  height: 5vb;
-  font-size: 6vb;
+  height: 3vb;
+  font-size: 4vb;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0px;
@@ -225,7 +225,7 @@ footer p {
 
 .container3 {
   scroll-margin-top: 60px;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-bottom: 60px;
   padding-left: 0%;
   display: grid;
@@ -307,10 +307,13 @@ footer p {
 }
 
 .portfolio-card {
+  display: block; /* Asegura que se comporte como un bloque contenedor */
+  width: 100% !important; /* Ocupa el 100% del ancho de su columna */
+  aspect-ratio: 1/1; /* 1️⃣ FUERZA UN FORMATO CUADRADO (Perfecto para grids unificados) */
   -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
+     object-fit: cover; /* 2️⃣ Recorta la imagen por el centro de forma inteligente sin deformarla */
+  -o-object-position: center;
+     object-position: center; /* Centra el encuadre del recorte */
 }
 
 .portfoliofloor {
@@ -344,8 +347,8 @@ footer p {
 /* cursor */
 #cursor-personalizado {
   position: fixed;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  background-color: #fbff26;
+  color: rgb(0, 0, 0);
   padding: 10px 18px;
   border-radius: 6px;
   font-size: 16px;
@@ -363,7 +366,7 @@ footer p {
 
 /* estilos de proyectos */
 .container12 {
-  margin-top: 60px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 30% 67%;
   grid-template-rows: 100%;
@@ -544,7 +547,7 @@ body:not(.clase-proyecto):-webkit-scrollbar {
   border: 3px solid #ffffff;
 }
 
-.poppins-black, .poppins-extrabold, .poppins-bold, .poppins-semibold, .poppins-medium, .poppins-regular, .poppins-light, .poppins-extralight, .poppins-thin {
+.seccion-portafolio h2, .poppins-black, .poppins-extrabold, .poppins-bold, .poppins-semibold, .poppins-medium, .poppins-regular, .poppins-light, .poppins-extralight, .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
@@ -609,6 +612,58 @@ body:not(.clase-proyecto):-webkit-scrollbar {
   font-weight: 900;
 }
 
+/* ==========================================================================
+   CONEXIÓN Y AJUSTES DE CATEGORÍAS EN FILAS
+   ========================================================================== */
+/* 1. Anulamos el comportamiento grid de container4 para que no rompa las secciones */
+.container4 {
+  display: block !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* 2. Devolvemos los márgenes correctos a cada bloque de categoría */
+.seccion-portafolio {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px; /* Separación saludable entre categorías */
+}
+
+/* 3. Corrección exacta de la tipografía heredando tus placeholders de Poppins */
+.seccion-portafolio h2 {
+  /* Usa tu misma base Poppins del proyecto */
+  font-weight: 300; /* Peso medium (puedes cambiarlo a 600 si quieres semibold) */
+  font-size: 30px; /* Mismo tamaño que tus subtítulos (.title1, .biotitulo) */
+  color: rgb(0, 0, 0); /* Hereda tu variable de color negro/azul principal */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* 4. Organización real en filas horizontales (Grid limpio e independiente por fila) */
+.contenedor-proyectos {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important; /* Reutiliza tus medidas originales */
+  gap: 20px !important;
+  width: 100%;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN PARA MÓVILES (MEDIA QUERY)
+   ========================================================================== */
+@media all and (max-width: 600px) {
+  .seccion-portafolio {
+    margin: 20px 20px 0 20px;
+  }
+  .seccion-portafolio h2 {
+    font-size: 26px; /* Un poco más pequeño en móviles */
+    margin-top: 15px;
+  }
+  .contenedor-proyectos {
+    grid-template-columns: 1fr !important; /* En móviles va a una sola columna estirada como tenías el original */
+    grid-gap: 20px;
+  }
+}
 @media all and (max-width: 600px) {
   body {
     box-sizing: border-box;

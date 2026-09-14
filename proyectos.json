@@ -3,39 +3,42 @@
     "clase": "portfolio-card",
     "enlace": "portfolio_pan.html",
     "imagen": "recursos/imagenes/pan_protectora/mockup_poster_corrección.jpg",
-    "alt": "mockup carteles pan"
+    "alt": "mockup carteles pan",
+    "categoria": "branding"
   },
   {
     "clase": "portfolio-card",
     "enlace": "Portfolio_Cata_la_lata.html",
     "imagen": "recursos/imagenes/cata_la_lata/atún3.jpg",
-    "alt": "mockup packaging"
+    "alt": "mockup packaging",
+    "categoria": "grafica-impresa"
   },
   {
     "clase": "portfolio-card",
     "enlace": "portfolio_familias_tipo.html",
     "imagen": "recursos/imagenes/tipo_musica/3_3.jpg",
-    "alt": "fancine tipo"
+    "alt": "fancine tipo",
+    "categoria": "grafica-impresa"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "portfolio_pussiere_etoile.html",
+    "imagen": "recursos/imagenes/pussiere_etoile/panfleto_1.jpeg",
+    "alt": "pussiere etoile",
+    "categoria": "grafica-impresa"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "portfolio_bandcamp.html",
+    "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
+    "alt": "render 3d",
+    "categoria": "branding"
   },
   {
     "clase": "portfolio-card",
     "enlace": "portfolio_cafe_hafa.html",
     "imagen": "recursos/imagenes/cafe_hafa/hafarender5.png",
-    "alt": "render 3d"
-  },
-
-  {
-    "clase": "portfolio-card",
-    "enlace": "portfolio_bandcamp.html",
-    "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
-    "alt": "render 3d"
-  },
-
-  {
-    "clase": "portfolio-card",
-    "enlace": "portfolio_pussiere_etoile.html",
-    "imagen": "recursos/imagenes/pussiere_etoile/panfleto_1.jpeg",
-    "alt": "pussiere etoile"
+    "alt": "render 3d",
+    "categoria": "motion-graphics"
   }
-
 ]
