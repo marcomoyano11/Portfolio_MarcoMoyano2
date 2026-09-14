@@ -40,5 +40,12 @@
     "imagen": "recursos/imagenes/cafe_hafa/hafarender5.png",
     "alt": "render 3d",
     "categoria": "motion-graphics"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "",
+    "imagen": "recursos/imagenes/video/Captura de pantalla 2026-09-14 203615.png",
+    "alt": "render 3d",
+    "categoria": "audiovisuales"
   }
 ]
