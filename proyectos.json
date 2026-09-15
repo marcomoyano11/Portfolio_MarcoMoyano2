@@ -43,9 +43,16 @@
   },
   {
     "clase": "portfolio-card",
-    "enlace": "",
+    "enlace": "video_el_robo.html",
     "imagen": "recursos/imagenes/video/Captura de pantalla 2026-09-14 203615.png",
     "alt": "render 3d",
     "categoria": "audiovisuales"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "video_carlangas.html",
+    "imagen": "recursos/imagenes/carlangas_video/feininger_concha2.png",
+    "alt": "render 3d",
+    "categoria": "motion-graphics"
   }
 ]
