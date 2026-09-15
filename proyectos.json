@@ -54,5 +54,20 @@
     "imagen": "recursos/imagenes/carlangas_video/feininger_concha2.png",
     "alt": "render 3d",
     "categoria": "motion-graphics"
+  },
+  {
+    "clase": "portfolio-card",
+    "enlace": "fotografía_exterior.html",
+    "imagen": "recursos/imagenes/fotografía/Ñequi_3.jpg",
+    "alt": "render 3d",
+    "categoria": "audiovisuales"
+  },
+   {
+    "clase": "portfolio-card",
+    "enlace": "fotografía_estudio.html",
+    "imagen": "recursos/imagenes/fotografía/clave alta 3.png",
+    "alt": "render 3d",
+    "categoria": "audiovisuales"
   }
+
 ]
