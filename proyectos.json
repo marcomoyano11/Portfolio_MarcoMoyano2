@@ -29,6 +29,13 @@
   },
   {
     "clase": "portfolio-card",
+    "enlace": "cartel_tipo.html",
+    "imagen": "recursos/imagenes/cartel_tipo/cartel_1.jpg",
+    "alt": "cartel tipográfico",
+    "categoria": "grafica-impresa"
+  },
+  {
+    "clase": "portfolio-card",
     "enlace": "portfolio_bandcamp.html",
     "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
     "alt": "render 3d",
@@ -69,5 +76,6 @@
     "alt": "render 3d",
     "categoria": "audiovisuales"
   }
+
 
 ]
