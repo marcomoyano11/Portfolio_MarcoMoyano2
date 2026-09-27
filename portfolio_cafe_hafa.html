@@ -19,7 +19,7 @@
 
 <body class="clase-proyecto">
 
-    <nav class="flex nav poppins-medium">       
+    <nav class="flex nav poppins-light">       
         <a href="index.html"><p class="navdiv zoom2">Home.</p></a>
         <a href="index.html#portfolio"><p class="navdiv zoom2">Portfolio</p></a>
         <a href="/contacto.html"><p class="navdiv zoom2">contacto</p></a>
@@ -59,23 +59,48 @@
     </div> <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      const swiper = new Swiper(".mySwiper", {
-        loop: true,           
-        spaceBetween: 30,     
-        effect: "fade",       
-        
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+  // 1. Inicializamos el Swiper con soporte para autoplay (se mueve cada 5 segundos)
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,           
+    spaceBetween: 30,     
+    effect: "fade",       
+    autoplay: {
+      delay: 5000,                  // Tiempo de espera en cada diapositiva (5 segundos)
+      disableOnInteraction: false,   // Evita que el carrusel se rompa si el usuario hace clic en las flechas
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+  });
 
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        }
-       
-      });
-    </script>
+  // 2. Control inteligente de los videos dentro del slider
+  // Buscamos todos los elementos de video que estén dentro de las diapositivas
+  const todosLosVideos = document.querySelectorAll('.swiper-slide video');
+
+  todosLosVideos.forEach(video => {
+    
+    // ⏸️ Al darle a PLAY al video: detenemos por completo el autoplay del carrusel
+    video.addEventListener('play', () => {
+      swiper.autoplay.stop();
+    });
+
+    // ▶️ Al pausar el video: el carrusel vuelve a activarse para pasar las diapositivas solo
+    video.addEventListener('pause', () => {
+      swiper.autoplay.start();
+    });
+
+    // 🔄 Cuando el video termina de reproducirse: el carrusel se reactiva automáticamente
+    video.addEventListener('ended', () => {
+      swiper.autoplay.start();
+    });
+  });
+</script>
+
 
     <footer class="poppins-extralight">
         <p>Created by <span class="poppins-medium "> Marco Moyano. </span></p>

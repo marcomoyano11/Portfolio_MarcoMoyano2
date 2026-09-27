@@ -76,6 +76,14 @@
     "imagen": "recursos/imagenes/fotografía/clave alta 3.jpg",
     "alt": "render 3d",
     "categoria": ""
+  },
+
+{
+    "clase": "portfolio-card",
+    "enlace": "web_componentes.html",
+    "imagen": "recursos/imagenes/web_componentes/pagina_mockup1.jpg",
+    "alt": "mockup web componentes",
+    "categoria": "grafica-web"
   }
 
 

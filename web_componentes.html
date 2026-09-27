@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="recursos/normalize.css" rel="stylesheet">
+    <link href="recursos/poppins.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+</head>
+<body class="clase-proyecto">
+      <nav class="flex nav poppins-light">       
+        
+       
+        <a href="index.html"><p class="navdiv zoom2">Home.</p></a>
+        <a href="index.html#portfolio"><p class="navdiv zoom2">Portfolio</p></a>
+        <a href="/contacto.html"><p class="navdiv zoom2">contacto</p></a>
+        
+    </nav>
+    
+      <div class="container12">
+
+         <div class=" port_text">
+           <p class= "poppins-bold title2 "> Comic Shop componentes</p>
+             <p class= "poppins-light title4 "> componentes web </p>
+
+            <p class=" poppins-light text2">
+              En este ejercicio, tuvimos que relaizar un paquete de componentes web, yo decidí enfocar 
+              el proyecto en una tienda de comics online, creando header, enlaces, botones, cards etc.
+              Los componentes fueron realizados en figma y posteriormente traducidos a código HTML y CSS.
+              La paleta de colores, la tipografía y los elementos gráficos siguen un estilo cartoon llamativo 
+              y desenfadado, pero a la vez sencillo y fundional.
+                </p>
+        </div>
+
+
+        <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+        <img src="recursos/imagenes/web_componentes/pagina_mockup1.jpg" alt="" class="img-galeria">
+    </div>
+    
+    <div class="swiper-slide">
+        <video src="recursos/imagenes/web_componentes/página.mp4" alt="" class="img-galeria" controls>
+    </div>
+
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <div class="swiper-pagination"></div>
+</div>
+            
+    </div>
+
+    <footer class=" poppins-extralight">
+    <p>Created by <span class="poppins-medium"> Marco Moyano. </span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  // 1. Inicializamos el Swiper con soporte para autoplay (se mueve cada 5 segundos)
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,           
+    spaceBetween: 30,     
+    effect: "fade",       
+    autoplay: {
+      delay: 5000,                  // Tiempo de espera en cada diapositiva (5 segundos)
+      disableOnInteraction: false,   // Evita que el carrusel se rompa si el usuario hace clic en las flechas
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+  });
+
+  // 2. Control inteligente de los videos dentro del slider
+  // Buscamos todos los elementos de video que estén dentro de las diapositivas
+  const todosLosVideos = document.querySelectorAll('.swiper-slide video');
+
+  todosLosVideos.forEach(video => {
+    
+    // ⏸️ Al darle a PLAY al video: detenemos por completo el autoplay del carrusel
+    video.addEventListener('play', () => {
+      swiper.autoplay.stop();
+    });
+
+    // ▶️ Al pausar el video: el carrusel vuelve a activarse para pasar las diapositivas solo
+    video.addEventListener('pause', () => {
+      swiper.autoplay.start();
+    });
+
+    // 🔄 Cuando el video termina de reproducirse: el carrusel se reactiva automáticamente
+    video.addEventListener('ended', () => {
+      swiper.autoplay.start();
+    });
+  });
+</script>
+
+
+</body>
+</html>
