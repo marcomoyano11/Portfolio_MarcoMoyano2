@@ -1,7 +1,7 @@
 //colores
 $azul-principal: rgb(0, 0, 0);
 $azul-secundario: rgb(0, 0, 0);
-$azul-scrollbar: rgb(0, 0, 0);
+$azul-scrollbar: rgb(62, 88, 136);
 $blanco: #ffffff;
 $negro: rgb(0, 0, 0);
 
@@ -176,7 +176,7 @@ nav {
   top: 0px;
   background-color: white;
   z-index: 99999;
-  border-bottom: 2px solid $azul-secundario;
+  border-bottom: 1px solid $azul-secundario;
   
 }
 
@@ -199,10 +199,8 @@ footer {
   justify-content: center;
   align-items: center;
   bottom: 0;
-  border-top: 2px solid $azul-secundario;
+  border-top: 1px solid $azul-secundario;
   
-
-
   p {
     color: $azul-principal;
     font-size: 24px;
@@ -254,10 +252,10 @@ footer {
   padding-top: 20px;
   padding-left: 30px;
   margin: 0%;
-  font-size: clamp(1rem, 6vw, 2.2rem);
+  font-size: 32px;
   word-break: keep-all;
   color: $azul-secundario;
-  line-height: 1,3;
+  line-height: 1.3;
   color: $azul-secundario;
   grid-area: img;
 }
@@ -280,7 +278,7 @@ footer {
 }
 
 .portfoliotitulo {
-  font-size: 40px;
+  font-size: 32px;
   padding-top: 14px;
   padding-right: 100px;
   padding-left: 20px;
@@ -297,6 +295,7 @@ footer {
   aspect-ratio: 1 / 1;       /* 1️⃣ FUERZA UN FORMATO CUADRADO (Perfecto para grids unificados) */
   object-fit: cover;         /* 2️⃣ Recorta la imagen por el centro de forma inteligente sin deformarla */
   object-position: center;   /* Centra el encuadre del recorte */
+  border-radius: 12px;  
 }
 
 
@@ -457,11 +456,10 @@ footer {
 }
 
 .containercontacto {
-  margin-top: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
+  
   width: auto;
-  font-size: 30px;
+  font-size: 24px;
+  text-align: center !important;
   
   p { 
     margin-top: 0px;
@@ -586,7 +584,7 @@ body {
 .seccion-portafolio h2 {
   @extend %poppins-base;             /* Usa tu misma base Poppins del proyecto */
   font-weight: 300;                  /* Peso medium (puedes cambiarlo a 600 si quieres semibold) */
-  font-size: 30px;                   /* Mismo tamaño que tus subtítulos (.title1, .biotitulo) */
+  font-size: 24px;                   /* Mismo tamaño que tus subtítulos (.title1, .biotitulo) */
   color: $azul-principal;            /* Hereda tu variable de color negro/azul principal */
   margin-top: 10px;
   margin-bottom: 20px;
@@ -620,6 +618,74 @@ body {
     grid-gap: 20px;
   }
 }
+
+
+/*PAGINA SOBRE MI
+
+/* Grilla principal */
+.portfolio-grid {
+    margin: auto;
+    padding: 32px;
+    background-color: #ffffff;
+    margin-top: 50px;
+    min-width: auto;
+    max-width: 1200px; /* Opcional: evita que se deforme en pantallas gigantes */
+    
+    /* Configuración del Grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 30px; /* Espacio entre contenedores */
+}
+
+/* Estilo base de los contenedores de información */
+.card {
+    padding: 0px 0px; /* Espacio interno para tus textos */
+    text-align: start;
+    min-height: 200px;
+    min-width: auto;
+
+    position: relative; /* Convierte la tarjeta en el punto de referencia */
+    overflow: hidden;   /* Corta de forma invisible todo lo que se salga de ella */
+}
+
+.card img {
+    position: absolute; /* Desvincula la imagen del flujo de texto para que no "empuje" */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Corta y adapta la imagen perfectamente al tamaño que tenga la tarjeta */
+    z-index: 1;         /* Coloca la imagen al fondo */
+    border-radius: 12px; /* Mantén el mismo radio de borde que tus tarjetas */  
+}
+
+/* 🆕 Añade esto para que los textos floten por encima de cualquier imagen de fondo */
+.card p, .card h3, .card span, .card a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hace que el último contenedor ocupe las 2 columnas */
+.full-width {
+    grid-column: span 2;
+}
+
+/* =======================================================
+   ADAPTABILIDAD MÓVIL (Media Query)
+   ======================================================= */
+@media (max-width: 600px) {
+    .portfolio-grid {
+        /* El 'minmax(0, 1fr)' evita que el contenido rompa el ancho de la pantalla */
+        grid-template-columns: minmax(0, 1fr); 
+    }
+    
+    .full-width {
+        /* Cancela el salto de columnas en móvil */
+        grid-column: span 1; 
+    }
+}
+
+
 
 
 //media query
@@ -746,9 +812,10 @@ body {
   }
 
   .containercontacto {
-    margin: 60px 20px 0 20px;
+    
     width: auto;
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
     
     p { 
       margin-top: 0px;
@@ -769,5 +836,64 @@ body {
       "img img img img"
       "title title title title"
       "text text text text";
+
+      
   }
+  
+ 
+  
+  // ... todos tus estilos actuales de móvil se quedan igual ...
+
+  /* 🚀 CORRECCIÓN DEFINITIVA PARA EL SWIPER EN MÓVIL */
+  
+    /* 🚀 ADAPTACIÓN FLUIDA Y NATURAL DEL SWIPER EN MÓVIL */
+  
+  .swiper.mySwiper {
+    height: auto !important;          /* Permite que la altura varíe dinámicamente */
+    max-height: 450px !important;     /* Altura máxima para que el slider no ocupe toda la pantalla del móvil */
+    margin-bottom: 20px !important;   
+    /* ❌ Eliminamos aspect-ratio para permitir que el tamaño cambie según la foto */
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;   /* Centra la imagen si es más estrecha o baja que el contenedor */
+    height: 100% !important;
+  }
+
+  .swiper-slide img, 
+  .swiper-slide video {
+    width: 100% !important;           /* Ocupa el ancho completo disponible */
+    height: auto !important;          /* 🌟 CLAVE: La altura se calcula de forma automática según la proporción original */
+    max-height: 450px !important;     /* Evita que las fotos muy verticales desborden el carrusel */
+    object-fit: contain !important;   /* 🌟 CLAVE: Muestra la foto ENTERA (alargada o estrecha) sin recortar nada */
+    object-position: center;
+  }
+  
+  /* Ajuste de los puntitos de paginación para que se posicionen de forma limpia */
+  .swiper-pagination {
+    bottom: 5px !important;
+  }
+
+
+footer {
+  margin-top: 0px;
+  padding: 10px 0;
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(250, 250, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  border-top: 1px solid $azul-secundario;
+  
+  p {
+    color: $azul-principal;
+    font-size: 18px;
+  }
+}
+
+
 }
