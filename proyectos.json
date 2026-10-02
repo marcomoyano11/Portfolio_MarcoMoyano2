@@ -1,6 +1,13 @@
 [
   {
     "clase": "portfolio-card",
+    "enlace": "portfolio_bandcamp.html",
+    "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
+    "alt": "render 3d",
+    "categoria": "branding"
+  },
+  {
+    "clase": "portfolio-card",
     "enlace": "portfolio_pan.html",
     "imagen": "recursos/imagenes/pan_protectora/mockup_poster_corrección.jpg",
     "alt": "mockup carteles pan",
@@ -34,13 +41,7 @@
     "alt": "cartel tipográfico",
     "categoria": "grafica-impresa"
   },
-  {
-    "clase": "portfolio-card",
-    "enlace": "portfolio_bandcamp.html",
-    "imagen": "recursos/imagenes/bandcamp/mockup_1.png",
-    "alt": "render 3d",
-    "categoria": "branding"
-  },
+
   {
     "clase": "portfolio-card",
     "enlace": "portfolio_cafe_hafa.html",
